@@ -1,0 +1,8 @@
+{
+  "name": "Remix MausamSetu India - Weather Intelligence \u0026 Verification Platform",
+  "description": "Location-aware weather intelligence, hyper-local risk analysis, verified multi-source hazard alerts, and real-time early warnings across 14 major Indian cities and localities.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

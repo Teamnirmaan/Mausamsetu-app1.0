@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  * {
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+  html.day * {
+    border-color: rgba(15, 23, 42, 0.1);
+  }
+  body {
+    background-color: #030712;
+    color: #f3f4f6;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  html.day body {
+    background-color: #f8fafc;
+    color: #0f172a;
+  }
+}
+
+/* Custom scrollbar for dark & day dashboard */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+html.day ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+}
+html.day ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+html.day ::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Leaflet Weather Intelligence Themes */
+.leaflet-container {
+  background: #030712 !important;
+  font-family: inherit;
+}
+html.day .leaflet-container {
+  background: #f8fafc !important;
+}
+
+.dark-weather-basemap .leaflet-tile {
+  filter: brightness(0.65) invert(1) contrast(2.4) hue-rotate(200deg) saturate(0.35) !important;
+}
+html.day .dark-weather-basemap .leaflet-tile {
+  filter: none !important;
+}
+
+/* Custom Leaflet Dark & Day Popups */
+.leaflet-popup-content-wrapper {
+  background: #0f172a !important;
+  color: #f8fafc !important;
+  border: 1px solid #334155 !important;
+  border-radius: 0.75rem !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5) !important;
+}
+html.day .leaflet-popup-content-wrapper {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid #cbd5e1 !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.leaflet-popup-tip {
+  background: #0f172a !important;
+  border: 1px solid #334155 !important;
+}
+html.day .leaflet-popup-tip {
+  background: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+.leaflet-popup-close-button {
+  color: #94a3b8 !important;
+  padding: 6px !important;
+}
+.leaflet-popup-close-button:hover {
+  color: #ffffff !important;
+}
+html.day .leaflet-popup-close-button {
+  color: #64748b !important;
+}
+html.day .leaflet-popup-close-button:hover {
+  color: #0f172a !important;
+}
